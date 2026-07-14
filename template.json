@@ -1,6 +1,6 @@
 {
   "title": "Portfolio",
-  "description": "A dark, modern portfolio powered by Next.js + Sanity.",
+  "description": "A clean, modern portfolio powered by Next.js + Sanity.",
   "tags": ["portfolio", "next.js", "sanity"],
   "cover": "cover.png"
 }

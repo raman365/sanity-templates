@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     default: "Portfolio",
     template: "%s — Portfolio",
   },
-  description: "A dark, modern portfolio powered by Next.js + Sanity.",
+  description: "A clean, modern portfolio powered by Next.js + Sanity.",
 };
 
 export default function RootLayout({

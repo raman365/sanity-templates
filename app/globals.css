@@ -1,14 +1,14 @@
 @import "tailwindcss";
 
 @theme {
-  --color-background: #09090e;
-  --color-surface: #101017;
-  --color-elevated: #16161f;
-  --color-line: #21212d;
-  --color-foreground: #ececf1;
-  --color-muted: #8e8ea3;
-  --color-accent: #d9f95a;
-  --color-accent-dim: #b5d63e;
+  --color-background: #f7f8fb;
+  --color-surface: #ffffff;
+  --color-elevated: #ffffff;
+  --color-line: #e4e7ee;
+  --color-foreground: #15161d;
+  --color-muted: #616676;
+  --color-accent: #4f46e5;
+  --color-accent-dim: #4338ca;
 
   --font-display: var(--font-space-grotesk), ui-sans-serif, system-ui;
   --font-sans: var(--font-inter), ui-sans-serif, system-ui;
@@ -44,12 +44,12 @@ body {
   background:
     radial-gradient(
       ellipse 60% 45% at 70% 0%,
-      color-mix(in srgb, var(--color-accent) 9%, transparent),
+      color-mix(in srgb, var(--color-accent) 14%, transparent),
       transparent 70%
     ),
     radial-gradient(
-      ellipse 50% 40% at 15% 20%,
-      rgba(120, 100, 255, 0.07),
+      ellipse 55% 45% at 12% 15%,
+      rgba(139, 122, 255, 0.12),
       transparent 70%
     );
 }

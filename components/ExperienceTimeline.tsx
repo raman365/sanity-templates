@@ -15,7 +15,7 @@ export function ExperienceTimeline({
     <ol className="relative ml-2 border-l border-line">
       {experiences.map((experience, index) => (
         <li key={experience._id} className="relative pb-14 pl-10 last:pb-0">
-          <span className="absolute -left-[5px] top-2 size-[9px] rounded-full bg-accent shadow-[0_0_12px_rgba(217,249,90,0.6)]" />
+          <span className="absolute -left-[5px] top-2 size-[9px] rounded-full bg-accent shadow-[0_0_12px_rgba(79,70,229,0.45)]" />
           <Reveal delay={index * 100}>
             <p className="font-mono text-xs uppercase tracking-[0.2em] text-muted">
               {formatDateRange(experience.startDate, experience.endDate)}

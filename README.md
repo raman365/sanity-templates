@@ -1,6 +1,6 @@
 # Portfolio — Next.js + Sanity template
 
-A dark, modern portfolio powered by [Next.js](https://nextjs.org) (App Router, TypeScript, Tailwind CSS) and [Sanity](https://www.sanity.io) as the CMS, with Sanity Studio embedded at `/studio`.
+A clean, modern portfolio powered by [Next.js](https://nextjs.org) (App Router, TypeScript, Tailwind CSS) and [Sanity](https://www.sanity.io) as the CMS, with Sanity Studio embedded at `/studio`.
 
 - **Home** — hero with your name and tagline, featured-projects grid, experience timeline, contact footer
 - **/projects** — all projects
