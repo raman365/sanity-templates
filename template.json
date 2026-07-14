@@ -2,5 +2,6 @@
   "title": "Portfolio",
   "description": "A clean, modern portfolio powered by Next.js + Sanity.",
   "tags": ["portfolio", "next.js", "sanity"],
+  "demo": "https://sanity-template-portfolio.vercel.app",
   "cover": "cover.png"
 }
