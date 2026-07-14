@@ -1,6 +1,7 @@
 import type {
   Experience,
   Project,
+  Service,
   SiteSettings,
 } from "@/sanity/lib/types";
 
@@ -22,7 +23,39 @@ export const placeholderSettings: SiteSettings = {
     { label: "LinkedIn", url: "#" },
     { label: "Email", url: "#" },
   ],
+  aboutTitle: "Who we are",
+  aboutText:
+    "We're a small team who care about doing things properly — from the first conversation to the final handover. Whatever the medium, the goal is the same: work we're genuinely proud to put our name to.\n\nThis is placeholder text. Edit the About section in Site Settings to tell your own story, and leave it blank to hide this section entirely.",
+  stats: [
+    { value: "12+", label: "Years" },
+    { value: "150", label: "Projects delivered" },
+    { value: "100%", label: "Referral rate" },
+  ],
 };
+
+export const placeholderServices: Service[] = [
+  {
+    _id: "placeholder-svc-1",
+    icon: "🏗️",
+    title: "Design & build",
+    description:
+      "End-to-end delivery — planning, materials and craftsmanship, managed as one accountable process.",
+  },
+  {
+    _id: "placeholder-svc-2",
+    icon: "📷",
+    title: "Documentation",
+    description:
+      "Every stage captured properly, so the finished work is presented as well as it deserves.",
+  },
+  {
+    _id: "placeholder-svc-3",
+    icon: "✨",
+    title: "Consulting",
+    description:
+      "Not sure where to start? We'll scope the work, set a realistic budget, and map the path.",
+  },
+];
 
 export const placeholderProjects: Project[] = [
   {

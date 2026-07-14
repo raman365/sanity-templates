@@ -29,20 +29,28 @@ export function Nav({ name }: { name: string }) {
           {name}
         </Link>
         <ul className="flex items-center gap-7 font-mono text-sm text-muted">
+          <li className="hidden sm:block">
+            <Link
+              href="/#about"
+              className="link-underline pb-1 transition-colors hover:text-foreground"
+            >
+              About
+            </Link>
+          </li>
+          <li className="hidden sm:block">
+            <Link
+              href="/#services"
+              className="link-underline pb-1 transition-colors hover:text-foreground"
+            >
+              Services
+            </Link>
+          </li>
           <li>
             <Link
               href="/projects"
               className="link-underline pb-1 transition-colors hover:text-foreground"
             >
               Work
-            </Link>
-          </li>
-          <li>
-            <Link
-              href="/#experience"
-              className="link-underline pb-1 transition-colors hover:text-foreground"
-            >
-              Experience
             </Link>
           </li>
           <li>

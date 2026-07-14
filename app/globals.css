@@ -34,6 +34,22 @@ body {
   font-family: var(--font-sans);
 }
 
+/* Faint dot-grid texture so large light areas don't read as flat. */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background-image: radial-gradient(
+    rgba(21, 22, 29, 0.05) 1px,
+    transparent 1px
+  );
+  background-size: 26px 26px;
+  mask-image: linear-gradient(to bottom, #000, transparent 85%);
+  -webkit-mask-image: linear-gradient(to bottom, #000, transparent 85%);
+}
+
 ::selection {
   background: var(--color-accent);
   color: var(--color-background);
@@ -43,13 +59,13 @@ body {
 .hero-glow {
   background:
     radial-gradient(
-      ellipse 60% 45% at 70% 0%,
-      color-mix(in srgb, var(--color-accent) 14%, transparent),
-      transparent 70%
+      ellipse 60% 50% at 72% -5%,
+      color-mix(in srgb, var(--color-accent) 18%, transparent),
+      transparent 68%
     ),
     radial-gradient(
-      ellipse 55% 45% at 12% 15%,
-      rgba(139, 122, 255, 0.12),
+      ellipse 55% 45% at 10% 12%,
+      rgba(139, 122, 255, 0.16),
       transparent 70%
     );
 }

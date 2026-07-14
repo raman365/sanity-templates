@@ -21,7 +21,20 @@ export const siteSettingsQuery = groq`
     tagline,
     bio,
     profileImage,
-    socialLinks[]{ label, url }
+    socialLinks[]{ label, url },
+    aboutTitle,
+    aboutText,
+    aboutImage,
+    stats[]{ value, label }
+  }
+`;
+
+export const servicesQuery = groq`
+  *[_type == "service"] | order(order asc, _createdAt asc){
+    _id,
+    title,
+    description,
+    icon
   }
 `;
 

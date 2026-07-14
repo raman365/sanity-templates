@@ -62,7 +62,50 @@ const siteSettings = {
     { _type: 'socialLink', _key: key(), label: 'LinkedIn', url: 'https://linkedin.com' },
     { _type: 'socialLink', _key: key(), label: 'Email', url: 'mailto:hello@example.com' },
   ],
+  aboutTitle: 'Who we are',
+  aboutText:
+    "I've spent the last decade taking on work most people would call unrelated — restoring old buildings, shooting photo series, building the occasional web app. What ties it together is the approach: understand the brief, respect the materials, and finish properly.\n\nEvery project gets the same care whether it's a kitchen extension or a commissioned mural. No shortcuts, no surprises — just work I'm happy to put my name to.",
+  stats: [
+    { _type: 'stat', _key: key(), value: '12+', label: 'Years' },
+    { _type: 'stat', _key: key(), value: '150', label: 'Projects delivered' },
+    { _type: 'stat', _key: key(), value: '100%', label: 'Referral rate' },
+  ],
 }
+
+const services = [
+  {
+    _id: 'service-build',
+    icon: '🏗️',
+    order: 1,
+    title: 'Design & build',
+    description:
+      'End-to-end delivery — planning, materials and craftsmanship, managed as one accountable process from first sketch to handover.',
+  },
+  {
+    _id: 'service-photo',
+    icon: '📷',
+    order: 2,
+    title: 'Photography',
+    description:
+      'Commissioned series and documentation — every stage captured properly, so finished work is presented as well as it deserves.',
+  },
+  {
+    _id: 'service-art',
+    icon: '🎨',
+    order: 3,
+    title: 'Commissioned art',
+    description:
+      'Murals and bespoke pieces made for a space and its story, built to last in the environment they live in.',
+  },
+  {
+    _id: 'service-digital',
+    icon: '💻',
+    order: 4,
+    title: 'Digital',
+    description:
+      'Fast, modern websites and web apps when a project needs a home online — designed and built in-house.',
+  },
+].map((s) => ({ _type: 'service', ...s }))
 
 const projects = [
   {
@@ -175,14 +218,15 @@ const staleIds = [
 ]
 
 async function run() {
-  const docs = [siteSettings, ...projects, ...experience]
+  const docs = [siteSettings, ...services, ...projects, ...experience]
   let tx = client.transaction()
   for (const doc of docs) tx = tx.createOrReplace(doc)
   for (const id of staleIds) tx = tx.delete(id)
   await tx.commit()
   console.log(
     `\n  Seeded ${docs.length} documents into ${client.config().projectId}/${client.config().dataset}:\n` +
-      `  - 1 site settings (Alex Rivera)\n` +
+      `  - 1 site settings (Alex Rivera, with About + stats)\n` +
+      `  - ${services.length} services\n` +
       `  - ${projects.length} projects (${projects.filter((p) => p.featured).length} featured)\n` +
       `  - ${experience.length} experience entries\n\n` +
       '  Refresh your site — the demo content is live.\n',

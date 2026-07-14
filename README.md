@@ -63,9 +63,18 @@ The site revalidates every 60 seconds in production; in dev you'll see changes o
 
 | Type | Fields |
 | --- | --- |
-| `siteSettings` | name, tagline, bio, profile image, social links |
+| `siteSettings` | name, tagline, bio, profile image, social links, **About** heading/text/image, **stats** |
 | `project` | title, slug, summary, rich-text body, cover image, gallery, tags, client, date, location, external link (+ label), featured flag |
+| `service` | title, description, icon (emoji), order |
 | `experience` | company, role, start/end dates, description, logo |
+
+### Sections are optional
+
+The home page shows **About**, **Services**, **Featured projects**, and
+**Experience** in that order. Each section only appears if it has content, so a
+client who doesn't want (say) Experience just leaves those documents out and the
+section disappears — no code changes. An empty/unconfigured dataset shows sample
+content for every section so the template always looks complete.
 
 ## Project structure
 

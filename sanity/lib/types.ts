@@ -13,12 +13,28 @@ export interface SocialLink {
   url: string;
 }
 
+export interface Stat {
+  value: string;
+  label: string;
+}
+
 export interface SiteSettings {
   name?: string;
   tagline?: string;
   bio?: string;
   profileImage?: SanityImage;
   socialLinks?: SocialLink[];
+  aboutTitle?: string;
+  aboutText?: string;
+  aboutImage?: SanityImage;
+  stats?: Stat[];
+}
+
+export interface Service {
+  _id: string;
+  title?: string;
+  description?: string;
+  icon?: string;
 }
 
 export interface Project {
