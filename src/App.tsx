@@ -74,6 +74,12 @@ function App() {
         )}
       </header>
 
+      <div className="masthead">
+        <span>Gallery</span>
+        <span className="masthead-mid">One branch · one template</span>
+        <span>©&nbsp;{new Date().getFullYear()}</span>
+      </div>
+
       <section className="hero">
         <p className="hero-kicker">One repo · one branch per template</p>
         <h1>

@@ -1,13 +1,16 @@
 :root {
-  --bg: #faf8f5;
-  --panel: #ffffff;
-  --panel-2: #f4f1ec;
-  --border: #e7e2d9;
-  --text: #1c1a17;
-  --muted: #78726a;
-  --accent: #f03e2f;
-  --accent-2: #f97316;
-  --radius: 14px;
+  --bg: #f4efe3;
+  --panel: #fbf7ee;
+  --panel-2: #f0e8d9;
+  --border: #e4dbc8;
+  --text: #1d1811;
+  --muted: #7c7161;
+  --accent: #b5502f;
+  --accent-2: #c98a3c;
+  --radius: 16px;
+
+  --font-serif: 'Fraunces', ui-serif, Georgia, serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
 
   color-scheme: light;
   font-family:
@@ -30,16 +33,27 @@ body {
   margin: 0;
   background: var(--bg);
   color: var(--text);
-  background-image:
-    linear-gradient(rgba(0, 0, 0, 0.028) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0, 0, 0, 0.028) 1px, transparent 1px);
-  background-size: 44px 44px;
+}
+
+/* Fine paper grain over the whole page. */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0.5;
+  mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.045'/%3E%3C/svg%3E");
 }
 
 h1,
 h2,
 h3 {
-  line-height: 1.15;
+  font-family: var(--font-serif);
+  font-weight: 500;
+  font-optical-sizing: auto;
+  line-height: 1.05;
   margin: 0;
   letter-spacing: -0.02em;
 }
@@ -51,11 +65,16 @@ a {
 
 code,
 pre {
-  font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-family: var(--font-mono);
   font-size: 0.85em;
 }
 
 button,
 input {
   font: inherit;
+}
+
+::selection {
+  background: var(--accent);
+  color: #fbf7ee;
 }

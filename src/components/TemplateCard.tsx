@@ -1,14 +1,14 @@
 import { useState } from 'react'
 import type { Template } from '../types'
 
-/** Deterministic gradient per branch so cards without a cover still look good. */
+/** Deterministic warm/earthy gradient per branch so cover-less cards still look good. */
 const GRADIENTS = [
-  ['#f03e2f', '#f97316'],
-  ['#7c3aed', '#ec4899'],
-  ['#0ea5e9', '#22d3ee'],
-  ['#10b981', '#84cc16'],
-  ['#f59e0b', '#ef4444'],
-  ['#6366f1', '#a855f7'],
+  ['#b5502f', '#c98a3c'],
+  ['#9c6b3f', '#c9a15c'],
+  ['#7d5a4f', '#b08968'],
+  ['#a34d3a', '#d19a5b'],
+  ['#6f6a4d', '#a89a6a'],
+  ['#8a4a3c', '#c07a4e'],
 ]
 
 function gradientFor(branch: string): [string, string] {
