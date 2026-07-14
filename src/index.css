@@ -1,15 +1,15 @@
 :root {
-  --bg: #0a0b10;
-  --panel: #12141c;
-  --panel-2: #171a24;
-  --border: #242836;
-  --text: #e9ebf2;
-  --muted: #9299ac;
+  --bg: #faf8f5;
+  --panel: #ffffff;
+  --panel-2: #f4f1ec;
+  --border: #e7e2d9;
+  --text: #1c1a17;
+  --muted: #78726a;
   --accent: #f03e2f;
   --accent-2: #f97316;
   --radius: 14px;
 
-  color-scheme: dark;
+  color-scheme: light;
   font-family:
     'Inter',
     -apple-system,
@@ -31,8 +31,8 @@ body {
   background: var(--bg);
   color: var(--text);
   background-image:
-    linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+    linear-gradient(rgba(0, 0, 0, 0.028) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.028) 1px, transparent 1px);
   background-size: 44px 44px;
 }
 
