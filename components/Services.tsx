@@ -20,7 +20,7 @@ export function Services({ services }: { services: Service[] }) {
                   {String(index + 1).padStart(2, "0")}
                 </span>
               </div>
-              <h3 className="mt-6 font-display text-2xl font-bold tracking-tight transition-colors duration-300 group-hover:text-accent">
+              <h3 className="mt-6 font-display text-2xl font-medium tracking-tight transition-colors duration-300 group-hover:text-accent">
                 {service.title}
               </h3>
               {service.description && (

@@ -24,11 +24,11 @@ export function Nav({ name }: { name: string }) {
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
         <Link
           href="/"
-          className="font-display text-lg font-bold tracking-tight transition-colors hover:text-accent"
+          className="font-display text-xl font-medium tracking-tight transition-colors hover:text-accent"
         >
           {name}
         </Link>
-        <ul className="flex items-center gap-7 font-mono text-sm text-muted">
+        <ul className="flex items-center gap-7 font-mono text-xs uppercase tracking-[0.12em] text-muted">
           <li className="hidden sm:block">
             <Link
               href="/#about"

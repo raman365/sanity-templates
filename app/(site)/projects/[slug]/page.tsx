@@ -73,7 +73,7 @@ export default async function ProjectPage({ params }: PageProps) {
       </Link>
 
       <h1
-        className="animate-fade-up mt-8 font-display text-5xl font-bold leading-[1.02] tracking-tight sm:text-6xl"
+        className="animate-fade-up mt-8 font-display text-5xl font-medium leading-[1.02] tracking-tight sm:text-7xl"
         style={{ animationDelay: "0.1s" }}
       >
         {title}
@@ -156,7 +156,7 @@ export default async function ProjectPage({ params }: PageProps) {
 
       {gallery && gallery.length > 0 && (
         <section className="mt-20">
-          <h2 className="font-display text-3xl font-bold tracking-tight">
+          <h2 className="font-display text-4xl font-medium tracking-tight">
             Gallery
           </h2>
           <div className="mt-8 grid gap-5 sm:grid-cols-2">

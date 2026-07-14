@@ -22,11 +22,11 @@ export default async function ProjectsPage() {
 
   return (
     <div className="mx-auto max-w-6xl px-6 pb-24 pt-40">
-      <p className="animate-fade-up font-mono text-sm uppercase tracking-[0.25em] text-accent">
+      <p className="animate-fade-up rule-dot font-mono text-xs uppercase tracking-[0.25em] text-accent">
         Archive
       </p>
       <h1
-        className="animate-fade-up mt-4 font-display text-5xl font-bold tracking-tight sm:text-7xl"
+        className="animate-fade-up mt-5 font-display text-6xl font-medium leading-[1.0] tracking-tight sm:text-8xl"
         style={{ animationDelay: "0.1s" }}
       >
         All projects

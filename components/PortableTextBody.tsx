@@ -30,12 +30,12 @@ const components = {
   },
   block: {
     h2: ({ children }: { children?: React.ReactNode }) => (
-      <h2 className="mt-12 font-display text-3xl font-bold tracking-tight">
+      <h2 className="mt-12 font-display text-3xl font-medium tracking-tight">
         {children}
       </h2>
     ),
     h3: ({ children }: { children?: React.ReactNode }) => (
-      <h3 className="mt-10 font-display text-2xl font-bold tracking-tight">
+      <h3 className="mt-10 font-display text-2xl font-medium tracking-tight">
         {children}
       </h3>
     ),

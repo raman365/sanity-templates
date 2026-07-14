@@ -2,8 +2,8 @@ import Link from "next/link";
 
 import { About } from "@/components/About";
 import { ExperienceTimeline } from "@/components/ExperienceTimeline";
+import { FeaturedProject } from "@/components/FeaturedProject";
 import { Hero } from "@/components/Hero";
-import { ProjectCard } from "@/components/ProjectCard";
 import { Reveal } from "@/components/Reveal";
 import { SectionHeading } from "@/components/SectionHeading";
 import { Services } from "@/components/Services";
@@ -73,11 +73,13 @@ export default async function HomePage() {
               </Link>
             </Reveal>
           </div>
-          <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-16 space-y-24 lg:space-y-32">
             {projects.map((project, index) => (
-              <Reveal key={project._id} delay={index * 100} className="h-full">
-                <ProjectCard project={project} />
-              </Reveal>
+              <FeaturedProject
+                key={project._id}
+                project={project}
+                index={index}
+              />
             ))}
           </div>
         </section>

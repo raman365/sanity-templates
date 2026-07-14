@@ -1,16 +1,16 @@
 @import "tailwindcss";
 
 @theme {
-  --color-background: #f7f8fb;
-  --color-surface: #ffffff;
-  --color-elevated: #ffffff;
-  --color-line: #e4e7ee;
-  --color-foreground: #15161d;
-  --color-muted: #616676;
-  --color-accent: #4f46e5;
-  --color-accent-dim: #4338ca;
+  --color-background: #f4efe3;
+  --color-surface: #fbf7ee;
+  --color-elevated: #fbf7ee;
+  --color-line: #e4dbc8;
+  --color-foreground: #1d1811;
+  --color-muted: #7c7161;
+  --color-accent: #b5502f;
+  --color-accent-dim: #8f3d21;
 
-  --font-display: var(--font-space-grotesk), ui-sans-serif, system-ui;
+  --font-display: var(--font-fraunces), ui-serif, Georgia, serif;
   --font-sans: var(--font-inter), ui-sans-serif, system-ui;
   --font-mono: var(--font-jetbrains-mono), ui-monospace, monospace;
 
@@ -34,40 +34,55 @@ body {
   font-family: var(--font-sans);
 }
 
-/* Faint dot-grid texture so large light areas don't read as flat. */
+/* Fine paper grain over the whole page for warmth and depth. */
 body::before {
   content: "";
   position: fixed;
   inset: 0;
   z-index: -1;
   pointer-events: none;
-  background-image: radial-gradient(
-    rgba(21, 22, 29, 0.05) 1px,
-    transparent 1px
-  );
-  background-size: 26px 26px;
-  mask-image: linear-gradient(to bottom, #000, transparent 85%);
-  -webkit-mask-image: linear-gradient(to bottom, #000, transparent 85%);
+  opacity: 0.5;
+  mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.045'/%3E%3C/svg%3E");
 }
 
 ::selection {
   background: var(--color-accent);
-  color: var(--color-background);
+  color: #fbf7ee;
 }
 
-/* Subtle ambient glow behind the hero */
+/* Serif display: tuned optical size + tight editorial tracking. */
+.font-display {
+  font-optical-sizing: auto;
+  font-variation-settings: "opsz" 40;
+  letter-spacing: -0.015em;
+}
+
+/* Warm ambient wash behind the hero. */
 .hero-glow {
   background:
     radial-gradient(
-      ellipse 60% 50% at 72% -5%,
-      color-mix(in srgb, var(--color-accent) 18%, transparent),
-      transparent 68%
+      ellipse 70% 55% at 78% -8%,
+      color-mix(in srgb, var(--color-accent) 20%, transparent),
+      transparent 66%
     ),
     radial-gradient(
-      ellipse 55% 45% at 10% 12%,
-      rgba(139, 122, 255, 0.16),
+      ellipse 50% 45% at 8% 8%,
+      rgba(201, 138, 60, 0.16),
       transparent 70%
     );
+}
+
+/* Thin rule with an editorial dot, used to head sections. */
+.rule-dot::before {
+  content: "";
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-radius: 999px;
+  background: var(--color-accent);
+  margin-right: 0.75rem;
+  vertical-align: middle;
 }
 
 /* Scroll-reveal: elements start hidden, Reveal.tsx flips them visible */

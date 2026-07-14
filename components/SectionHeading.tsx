@@ -10,10 +10,10 @@ export function SectionHeading({ eyebrow, title, id }: SectionHeadingProps) {
   return (
     <Reveal>
       <div id={id} className="scroll-mt-28">
-        <p className="font-mono text-sm uppercase tracking-[0.25em] text-accent">
+        <p className="rule-dot font-mono text-xs uppercase tracking-[0.25em] text-accent">
           {eyebrow}
         </p>
-        <h2 className="mt-3 font-display text-4xl font-bold tracking-tight sm:text-5xl">
+        <h2 className="mt-5 font-display text-5xl font-medium leading-[1.02] tracking-tight sm:text-6xl">
           {title}
         </h2>
       </div>

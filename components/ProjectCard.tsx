@@ -10,8 +10,8 @@ import type { Project } from "@/sanity/lib/types";
  */
 function CoverFallback({ title }: { title?: string }) {
   return (
-    <div className="flex size-full items-center justify-center bg-[radial-gradient(ellipse_at_top_left,#eef0ff,#e4e7f4)]">
-      <span className="font-display text-7xl font-bold text-accent/25 transition-colors duration-500 group-hover:text-accent/40">
+    <div className="flex size-full items-center justify-center bg-[radial-gradient(ellipse_at_top_left,#f3ead9,#e7d9bf)]">
+      <span className="font-display text-7xl font-medium text-accent/30 transition-colors duration-500 group-hover:text-accent/50">
         {title?.charAt(0) ?? "?"}
       </span>
     </div>
@@ -22,7 +22,7 @@ export function ProjectCard({ project }: { project: Project }) {
   const { title, slug, summary, coverImage, tags } = project;
 
   const card = (
-    <article className="group flex h-full flex-col overflow-hidden rounded-2xl border border-line bg-surface transition-all duration-500 hover:-translate-y-1.5 hover:border-accent/50 hover:shadow-[0_20px_60px_-20px_rgba(79,70,229,0.28)]">
+    <article className="group flex h-full flex-col overflow-hidden rounded-2xl border border-line bg-surface transition-all duration-500 hover:-translate-y-1.5 hover:border-accent/50 hover:shadow-[0_20px_60px_-20px_rgba(181,80,47,0.25)]">
       <div className="relative aspect-[16/10] overflow-hidden">
         {coverImage?.asset ? (
           <Image
@@ -38,7 +38,7 @@ export function ProjectCard({ project }: { project: Project }) {
       </div>
       <div className="flex flex-1 flex-col p-6">
         <div className="flex items-start justify-between gap-4">
-          <h3 className="font-display text-xl font-bold tracking-tight transition-colors duration-300 group-hover:text-accent">
+          <h3 className="font-display text-2xl font-medium tracking-tight transition-colors duration-300 group-hover:text-accent">
             {title}
           </h3>
           <span
