@@ -19,7 +19,7 @@ function CoverFallback({ title }: { title?: string }) {
 }
 
 export function ProjectCard({ project }: { project: Project }) {
-  const { title, slug, summary, coverImage, tech } = project;
+  const { title, slug, summary, coverImage, tags } = project;
 
   const card = (
     <article className="group flex h-full flex-col overflow-hidden rounded-2xl border border-line bg-surface transition-all duration-500 hover:-translate-y-1.5 hover:border-accent/50 hover:shadow-[0_20px_60px_-20px_rgba(79,70,229,0.28)]">
@@ -53,9 +53,9 @@ export function ProjectCard({ project }: { project: Project }) {
             {summary}
           </p>
         )}
-        {tech && tech.length > 0 && (
+        {tags && tags.length > 0 && (
           <ul className="mt-5 flex flex-wrap gap-2">
-            {tech.map((tag) => (
+            {tags.map((tag) => (
               <li
                 key={tag}
                 className="rounded-full border border-line px-3 py-1 font-mono text-xs text-muted"

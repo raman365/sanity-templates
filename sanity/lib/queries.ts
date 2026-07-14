@@ -6,9 +6,12 @@ const projectFields = groq`
   "slug": slug.current,
   summary,
   coverImage,
-  tech,
-  liveUrl,
-  repoUrl,
+  tags,
+  client,
+  date,
+  location,
+  link,
+  linkLabel,
   featured
 `;
 

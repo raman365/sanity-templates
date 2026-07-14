@@ -1,10 +1,12 @@
 # Portfolio — Next.js + Sanity template
 
-A clean, modern portfolio powered by [Next.js](https://nextjs.org) (App Router, TypeScript, Tailwind CSS) and [Sanity](https://www.sanity.io) as the CMS, with Sanity Studio embedded at `/studio`.
+A clean, modern **multi-purpose portfolio** powered by [Next.js](https://nextjs.org) (App Router, TypeScript, Tailwind CSS) and [Sanity](https://www.sanity.io) as the CMS, with Sanity Studio embedded at `/studio`.
+
+It works for any craft — a construction company's project book, an artist's or photographer's portfolio, a developer's site. Projects are image-first (cover + gallery), with generic optional fields (client, date, location, one external link) instead of anything trade-specific.
 
 - **Home** — hero with your name and tagline, featured-projects grid, experience timeline, contact footer
 - **/projects** — all projects
-- **/projects/[slug]** — project detail with rich-text body, gallery, tech tags, live/repo links
+- **/projects/[slug]** — project detail with client/date/location, rich-text body, image gallery, tags and an optional external link
 - **/studio** — embedded Sanity Studio for editing content
 
 The site renders gracefully with an empty (or unconfigured) dataset: every section falls back to sample placeholder content, which disappears as soon as you publish real documents.
@@ -62,7 +64,7 @@ The site revalidates every 60 seconds in production; in dev you'll see changes o
 | Type | Fields |
 | --- | --- |
 | `siteSettings` | name, tagline, bio, profile image, social links |
-| `project` | title, slug, summary, rich-text body, cover image, gallery, tech tags, live URL, repo URL, featured flag |
+| `project` | title, slug, summary, rich-text body, cover image, gallery, tags, client, date, location, external link (+ label), featured flag |
 | `experience` | company, role, start/end dates, description, logo |
 
 ## Project structure

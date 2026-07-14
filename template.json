@@ -1,7 +1,7 @@
 {
   "title": "Portfolio",
-  "description": "A clean, modern portfolio powered by Next.js + Sanity.",
-  "tags": ["portfolio", "next.js", "sanity"],
+  "description": "A multi-purpose portfolio for any craft — construction, art, photography, development.",
+  "tags": ["portfolio", "multi-purpose", "next.js", "sanity"],
   "demo": "https://sanity-template-portfolio.vercel.app",
   "cover": "cover.png"
 }

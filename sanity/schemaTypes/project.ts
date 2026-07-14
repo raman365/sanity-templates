@@ -82,21 +82,46 @@ export const project = defineType({
       ],
     }),
     defineField({
-      name: "tech",
-      title: "Tech tags",
+      name: "tags",
+      title: "Tags",
       type: "array",
       of: [{ type: "string" }],
       options: { layout: "tags" },
+      description:
+        'Whatever fits your craft — e.g. "Renovation", "Oil on canvas", "Next.js".',
     }),
     defineField({
-      name: "liveUrl",
-      title: "Live URL",
-      type: "url",
+      name: "client",
+      title: "Client",
+      type: "string",
+      description: "Who the work was for (optional).",
     }),
     defineField({
-      name: "repoUrl",
-      title: "Repository URL",
+      name: "date",
+      title: "Date",
+      type: "date",
+      options: { dateFormat: "MMM YYYY" },
+      description: "When the work was completed (optional).",
+    }),
+    defineField({
+      name: "location",
+      title: "Location",
+      type: "string",
+      description: 'e.g. "Oslo, Norway" (optional).',
+    }),
+    defineField({
+      name: "link",
+      title: "External link",
       type: "url",
+      description:
+        "Optional link related to this work — a live site, a listing, an article…",
+    }),
+    defineField({
+      name: "linkLabel",
+      title: "Link label",
+      type: "string",
+      description:
+        'Button text for the external link, e.g. "Visit site", "View listing". Defaults to "View link".',
     }),
     defineField({
       name: "featured",

@@ -8,14 +8,17 @@ import type {
  * Placeholder content shown when the Sanity dataset is empty (or not yet
  * configured), so the template always renders as a complete-looking site.
  * It disappears automatically as soon as real documents exist.
+ *
+ * The samples deliberately span different crafts — the template works as a
+ * portfolio for building, art, photography, development, or anything else.
  */
 
 export const placeholderSettings: SiteSettings = {
   name: "Your Name",
-  tagline: "Designer & developer crafting thoughtful digital experiences.",
+  tagline: "A portfolio for the work you're proud of — whatever your craft.",
   bio: "This is placeholder content. Open the Studio at /studio, create a Site Settings document, and this section will use your real name, tagline and bio.",
   socialLinks: [
-    { label: "GitHub", url: "#" },
+    { label: "Instagram", url: "#" },
     { label: "LinkedIn", url: "#" },
     { label: "Email", url: "#" },
   ],
@@ -24,26 +27,26 @@ export const placeholderSettings: SiteSettings = {
 export const placeholderProjects: Project[] = [
   {
     _id: "placeholder-1",
-    title: "Aurora Dashboard",
+    title: "Riverside House Renovation",
     summary:
-      "A real-time analytics dashboard with fluid data visualizations and a dark, glassy interface.",
-    tech: ["Next.js", "TypeScript", "D3"],
+      "A full renovation of a 1920s riverside home — new timber frame extension, restored brickwork and a light-filled kitchen.",
+    tags: ["Renovation", "Residential"],
     featured: true,
   },
   {
     _id: "placeholder-2",
-    title: "Fieldnotes",
+    title: "Coastal Light — Photo Series",
     summary:
-      "A minimal note-taking app built around speed — instant search, offline-first, keyboard everything.",
-    tech: ["React", "SQLite", "Tauri"],
+      "A twelve-image series shot along the northern coast across one winter, exhibited at the local gallery in spring.",
+    tags: ["Photography", "Exhibition"],
     featured: true,
   },
   {
     _id: "placeholder-3",
-    title: "Waypoint API",
+    title: "Nimbus Web App",
     summary:
-      "A geospatial routing API serving millions of requests a day with sub-50ms latency.",
-    tech: ["Go", "PostGIS", "Redis"],
+      "A real-time analytics dashboard with fluid data visualizations, built for a fast-moving product team.",
+    tags: ["Web app", "Next.js"],
     featured: true,
   },
 ];
@@ -52,27 +55,27 @@ export const placeholderExperiences: Experience[] = [
   {
     _id: "placeholder-exp-1",
     company: "Acme Studio",
-    role: "Senior Product Engineer",
+    role: "Senior Project Lead",
     startDate: "2023-01-01",
     description:
-      "Led the design-engineering team building tools used by thousands of creators every day.",
+      "Leading client projects end to end — planning, budgets and delivery — for a busy multidisciplinary studio.",
   },
   {
     _id: "placeholder-exp-2",
-    company: "Northwind Labs",
-    role: "Frontend Engineer",
+    company: "Northwind & Co",
+    role: "Project Manager",
     startDate: "2020-06-01",
     endDate: "2022-12-01",
     description:
-      "Shipped the company's design system and rebuilt the core product UI from the ground up.",
+      "Ran a portfolio of mid-size commissions and built the processes the team still uses today.",
   },
   {
     _id: "placeholder-exp-3",
     company: "Freelance",
-    role: "Designer & Developer",
+    role: "Independent",
     startDate: "2018-01-01",
     endDate: "2020-05-01",
     description:
-      "Worked with startups and agencies on brand sites, product prototypes and interactive experiences.",
+      "Worked directly with clients on a wide range of commissions, from first sketch to final delivery.",
   },
 ];

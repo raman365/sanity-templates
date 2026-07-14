@@ -29,9 +29,12 @@ export interface Project {
   body?: PortableTextBlock[];
   coverImage?: SanityImage;
   gallery?: SanityImage[];
-  tech?: string[];
-  liveUrl?: string;
-  repoUrl?: string;
+  tags?: string[];
+  client?: string;
+  date?: string;
+  location?: string;
+  link?: string;
+  linkLabel?: string;
   featured?: boolean;
 }
 
